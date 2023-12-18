@@ -27,7 +27,7 @@ ghcup tui
 3. `~/.ghcup/bin` を PATH に追加
 4. エディターの haskell mode などをインストール
 
-Terminalではまず `stack ghci` を開いて、 ~1 + 1~ などができれば十分でしょう。
+Terminalではまず `stack ghci` を開いて、 `1 + 1` などができれば十分でしょう。
 
 ## 概要
 
