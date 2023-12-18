@@ -13,6 +13,7 @@ import GHC.Generics (Generic)
 import Network.Wai.Handler.Warp (run)
 import Servant
 
+-- TODO Add an endpoint that uses a query param.
 type UserAPI = "users" :> Get '[JSON] [User]
   :<|> "users" :> Capture "name" String :> Get '[JSON] (Maybe User)
 
@@ -23,6 +24,7 @@ data User = User {
  , registration :: !Day
 } deriving (Eq, Show, Generic, ToJSON)
 
+-- TODO Add more entries.
 users :: [User]
 users =
   [ User "Isaac Newton"    372 "isaac@newton.co.uk" (fromGregorian 1683  3 1)
@@ -32,6 +34,9 @@ users =
 allUsers :: Handler [User]
 allUsers = pure users
 
+-- TODO Demonstrate hole fits with listToMaybe.
+-- TODO Refactor to make it pure.
+-- TODO Yield a better error than `null` when a match isn't found.
 getUser :: String -> Handler (Maybe User)
 getUser "" = pure Nothing
 getUser q  = pure . listToMaybe $ mapMaybe g users

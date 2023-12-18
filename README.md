@@ -45,6 +45,7 @@ Haskellの特徴：
 - Laziness
 - 副作用は全部型で管理する
 - コードが清潔、メンテしやすい
+- HKTs (higher-kinded types)
 
 型に関しては、Rustの多くの特徴がそのまま Haskell から由来します。
 
