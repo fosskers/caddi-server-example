@@ -17,14 +17,15 @@ extra-source-files:
     CHANGELOG.md
 
 executable caddi-server-example-exe
-  default-language: Haskell2010
+  default-language: GHC2021
   hs-source-dirs: src
   main-is: Main.hs
 
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates
-  -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules
-  -funclutter-valid-hole-fits -Wpartial-fields -Wredundant-constraints -threaded
-  -rtsopts -with-rtsopts=-N
+  ghc-options:
+    -Wall -Wcompat -Widentities -Wincomplete-record-updates
+    -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules
+    -funclutter-valid-hole-fits -Wpartial-fields -Wredundant-constraints -threaded
+    -rtsopts -with-rtsopts=-N
 
   build-depends:
       base >=4.7 && <5

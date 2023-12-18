@@ -1,7 +1,5 @@
 {-# LANGUAGE DataKinds      #-}
 {-# LANGUAGE DeriveAnyClass #-}
-{-# LANGUAGE DeriveGeneric  #-}
-{-# LANGUAGE TypeOperators  #-}
 
 module Main (main) where
 
@@ -35,6 +33,7 @@ allUsers :: Handler [User]
 allUsers = pure users
 
 -- TODO Demonstrate hole fits with listToMaybe.
+-- TODO Demonstrate type hole with (Maybe User).
 -- TODO Refactor to make it pure.
 -- TODO Yield a better error than `null` when a match isn't found.
 getUser :: String -> Handler (Maybe User)
