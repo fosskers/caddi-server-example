@@ -19,7 +19,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 できたら：
 
 ``` sh
-ghcup up
+ghcup tui
 ```
 
 1. 最新の `stack` をインストール（cargoみたいな物）
