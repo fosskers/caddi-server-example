@@ -29,6 +29,12 @@ ghcup tui
 
 Terminalではまず `stack ghci` を開いて、 `1 + 1` などができれば十分でしょう。
 
+Serverを試すには：
+
+``` sh
+stack run
+```
+
 ## 概要
 
 基本的に `stack` を使ってコンパイルしたりします。
